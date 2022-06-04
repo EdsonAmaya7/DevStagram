@@ -14,7 +14,6 @@
 
 <body class="bg-gray-100">
 
-
     <header class="p-5 border-b bg-white shadow">
 
     <div class="container mx-auto flex justify-between items-center">
@@ -23,7 +22,7 @@
 
         <nav class="flex gap-2 items-center">
         <a href="#" class="font-bold uppercase text-gray-600 text-sm">Login</a>
-        <a href="#" class="font-bold uppercase text-gray-600 text-sm">Crear Cuenta</a>
+        <a href="{{ route('register.index') }}" class="font-bold uppercase text-gray-600 text-sm">Crear Cuenta</a>
         </nav>
 
     </div>
@@ -37,7 +36,7 @@
         @yield('contenido')
     </main>
 
-    <footer class="text-center p-5 text-gray-500 font-bold uppercase">
+    <footer class="text-center p-5 mt-10 text-gray-500 font-bold uppercase">
 
         DevStagram -Todos los derechos reservados
             {{ now()->year  }}
