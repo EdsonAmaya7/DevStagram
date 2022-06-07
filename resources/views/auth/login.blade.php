@@ -51,6 +51,11 @@ Inicia Sesión en DevsTagram
                 @enderror
             </div>
 
+            <div class="mb-5">
+                <input type="checkbox" name="remember" id="">
+                <label class=" text-sm
+                text-gray-500 font-bold" for="">Mantener mi sesión abierta</label>
+            </div>
 
             <input type="submit" value="Iniciar Sesión" class="bg-sky-600
             hover:bg-sky-700
