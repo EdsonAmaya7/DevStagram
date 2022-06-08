@@ -21,4 +21,9 @@ class PostController extends Controller
 
         return view('layouts.dashboard', compact('user'));
     }
+
+    public function create()
+    {
+        return view('post.create');
+    }
 }
