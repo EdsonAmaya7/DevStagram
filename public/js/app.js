@@ -25,7 +25,17 @@ var dropzone = new dropzone__WEBPACK_IMPORTED_MODULE_0__["default"]('#dropzone',
   dictRemoveFile: 'Borrar Archivo',
   maxFiles: 1,
   uploadMultiple: false
-}); // import './bootstrap';
+});
+dropzone.on('sending', function (file, xhr, formData) {
+  console.log(file);
+});
+dropzone.on('success', function (file, response) {
+  console.log(response);
+});
+dropzone.on('error', function (file, message) {
+  console.log(message);
+});
+dropzone.on('removedfile', function () {}); // import './bootstrap';
 
 /***/ }),
 
