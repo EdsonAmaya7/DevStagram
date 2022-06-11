@@ -11,14 +11,14 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var dropzone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dropzone */ "./node_modules/dropzone/dist/dropzone.mjs");
 
-/* autodiscover false 
-porque dropzone busca un elemento con la clase dropzone
+/* autodiscover false
+porque dropzone busca un  elemento con la clase dropzone
 pero yo quiero darle el comportamiento a que endpoint y a que ruta
 quiero mandar las imagenes*/
 
 dropzone__WEBPACK_IMPORTED_MODULE_0__["default"].autoDiscover = false; // creando una instancia y su selector de dropzone
 
-var dropzone = new dropzone__WEBPACK_IMPORTED_MODULE_0__["default"]('#dropzone', {
+var dropzone = new dropzone__WEBPACK_IMPORTED_MODULE_0__["default"]("#dropzone", {
   dictDefaultMessage: "Sube aqui tu imagen",
   acceptedFiles: '.png, .jpg, .jpeg, .gif',
   addRemoveLinks: true,
@@ -26,10 +26,10 @@ var dropzone = new dropzone__WEBPACK_IMPORTED_MODULE_0__["default"]('#dropzone',
   maxFiles: 1,
   uploadMultiple: false,
   init: function init() {
-    if (document.querySelector('[name=imagen]').value.trim) {
+    if (document.querySelector('[name="imagen"]').value.trim()) {
       var imagenPublicada = {};
       imagenPublicada.size = 1234;
-      imagenPublicada.name = document.querySelector('[name=imagen]').value;
+      imagenPublicada.name = document.querySelector('[name="imagen"]').value;
       this.options.addedfile.call(this, imagenPublicada);
       this.options.thumbnail.call(this, imagenPublicada, "/uploads/".concat(imagenPublicada.name));
       imagenPublicada.previewElement.classList.add("dz-success", "dz-complete");
@@ -41,13 +41,13 @@ var dropzone = new dropzone__WEBPACK_IMPORTED_MODULE_0__["default"]('#dropzone',
 
 dropzone.on('success', function (file, response) {
   // console.log(response.imagen);
-  document.querySelector('[name=imagen]').value = response.imagen;
+  document.querySelector('[name="imagen"]').value = response.imagen;
 }); // dropzone.on('error',function(file,message){
 //     console.log(message);
 // })
 
 dropzone.on('removedfile', function () {
-  document.querySelector('[name=imagen]').value = '';
+  document.querySelector('[name="imagen"]').value = "";
 }); // import './bootstrap';
 
 /***/ }),
