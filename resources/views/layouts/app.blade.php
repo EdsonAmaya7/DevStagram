@@ -10,6 +10,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <title>Devstagram - @yield('titulo')</title>
 
+    @livewireStyles
 </head>
 
 
@@ -19,7 +20,7 @@
 
         <div class="container mx-auto flex justify-between items-center">
 
-            <h1 class="text-3xl font-black">DevStagram</h1>
+            <a href="{{ route('home') }}" class="text-3xl font-black">DevStagram</a>
 
 
             {{-- @if (auth()->user())
@@ -85,6 +86,8 @@
         {{ now()->year }}
 
     </footer>
+
+    @livewireScripts
 </body>
 
 </html>
