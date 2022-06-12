@@ -52,7 +52,7 @@ Inicia Sesión en DevsTagram
             </div>
 
             <div class="mb-5">
-                <input type="checkbox" name="remember" id="">
+                <input type="checkbox" name="remember" id="remember">
                 <label class=" text-sm
                 text-gray-500 font-bold" for="">Mantener mi sesión abierta</label>
             </div>
