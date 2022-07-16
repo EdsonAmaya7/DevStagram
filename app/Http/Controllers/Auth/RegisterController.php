@@ -38,13 +38,13 @@ class RegisterController extends Controller
         User::create([
 
             'name' => $request->name,
-            'username' => Str::slug( $request->username),
+            'username' => Str::slug( $request->username ),
             'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'password' => Hash::make( $request->password ),
         ]);
 
         // autenticar el usuario
-        auth()->attempt($request->only('email','password'));
+        auth()->attempt( $request->only('email','password') );
 
         // return redirect()->route('posts.index');
         return redirect()->route('posts.index', auth()->user()->username );
